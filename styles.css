@@ -1,4 +1,5 @@
 
+
 body {
     background-color: grey;
 }
@@ -7,6 +8,7 @@ body {
     column-count: 3;
     column-gap: 20px;
     min-width: 100%;
+    padding: 20px;
 }
 
 .card {
@@ -23,6 +25,7 @@ body {
     background-color: #742ee5;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .card p {
@@ -32,6 +35,7 @@ body {
 code {
     color: lime;
 }
+
 
 @media (max-width: 1300px) {
     .container {
