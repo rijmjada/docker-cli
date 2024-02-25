@@ -1,0 +1,41 @@
+.container {
+    column-count: 3;
+    column-gap: 20px;
+    min-width: 100%;
+}
+
+.card {
+    background-color: #333;
+    box-shadow: 0px 0px 15px 3px black;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    break-inside: avoid;
+}
+
+.card h5 {
+    background-color: #742ee5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card p {
+    color: rgb(169, 166, 166);
+}
+
+code {
+    color: lime;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        column-count: 1;
+    }
+}
