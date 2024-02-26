@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navLinks.forEach(function (link) {
         var linkHref = link.getAttribute('href');
 
-        // Verifica si estamos en la página de inicio y ajusta la comparación
+        // Verifica si estamos en la página de inicio o si la URL coincide
         if ((currentPage === '' && linkHref === './') || (currentPage !== '' && linkHref.includes(currentPage))) {
             link.classList.add('active');
         }
