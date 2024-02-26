@@ -4,6 +4,13 @@ body {
     background-color: grey;
 }
 
+.navbar {
+    border-radius: 0 0 2px 2px;
+}
+.active {
+    color: rgb(241, 102, 102) !important;
+}
+
 .container {
     column-count: 3;
     column-gap: 20px;
