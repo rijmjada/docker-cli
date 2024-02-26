@@ -21,6 +21,7 @@ body {
     break-inside: avoid;
 }
 
+
 .card h5 {
     background-color: #742ee5;
     padding: 10px;
@@ -36,6 +37,14 @@ code {
     color: lime;
 }
 
+.kubernetes h5 {
+    background-color: rgb(166, 41, 160);
+}
+
+
+.minikube h5 {
+    background-color: rgb(237, 75, 53);
+}
 
 @media (max-width: 1300px) {
     .container {

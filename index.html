@@ -15,6 +15,7 @@
 
     <div class="container ">
 
+        <!-- Docker Run Options -->
         <div class="card">
             <h5>Docker Run Options</h5>
             <br>
@@ -95,7 +96,7 @@
 
         </div>
 
-
+        <!-- Docker Images Options -->
         <div class="card ">
             <h5 class="text-center">Docker Images Options</h5>
             <br>
@@ -156,7 +157,7 @@
 
         </div>
 
-
+        <!-- Docker Network Options -->
         <div class="card ">
             <h5 class="text-center">Docker Network Options</h5>
             <br>
@@ -212,6 +213,7 @@
 
         </div>
 
+        <!-- Docker Volumes Options -->
         <div class="card ">
             <h5 class="text-center">Docker Volumes Options</h5>
             <br>
@@ -241,7 +243,7 @@
             <br>
         </div>
 
-
+        <!-- Docker Container Management -->
         <div class="card ">
             <h5 class="text-center"> Docker Container Management</h5>
             <br>
@@ -284,61 +286,164 @@
         </div>
 
 
-        <div class="card ">
-            <h5 class="text-center">Docker Network Options</h5>
-            <br>
-            <p> # Crear una red. </p>
-            <br>
-            <code>$ docker network create nombre_de_la_red </code>
 
 
-            <br>
-            <hr>
 
-            <p> # Listar redes: </p>
+        <!-- Sección para Cluster Management -->
+        <div class="card kubernetes">
+            <h5>Kubernetes Cluster Management</h5>
             <br>
-            <code>$ docker network ls </code>
+
+            <p># Crear un Cluster:</p>
+            <code>$ kubectl create cluster nombre_del_cluster</code>
             <br>
             <hr>
 
-            <p># Inspeccionar una red.</p>
-            <br>
-            <code>$ docker network inspect nombre_de_la_red </code>
-
+            <p># Listar Clusters:</p>
+            <code>$ kubectl config get-contexts</code>
             <br>
             <hr>
 
-            <p># Conectar un contenedor a una red.</p>
-            <br>
-            <code>$ docker network connect nombre_de_la_red nombre_del_contenedor </code>
-
+            <p># Obtener Credenciales del Cluster:</p>
+            <code>$ kubectl config use-context nombre_del_contexto</code>
             <br>
             <hr>
 
-            <p># Elimina una o varias imágenes locales.</p>
-            <br>
-            <code>$ docker rmi nombre_de_la_imagen[:etiqueta] [nombre_otra_imagen...]
-            </code>
-
+            <p># Eliminar un Cluster:</p>
+            <code>$ kubectl delete cluster nombre_del_cluster</code>
             <br>
             <hr>
-
-            <p># Muestra el historial de una imagen, incluyendo sus capas.</p>
-            <br>
-            <code>$ docker history nombre_de_la_imagen[:etiqueta]
-            </code>
-
-            <br>
-            <hr>
-
-            <p># Muestra información detallada sobre una imagen o contenedor.</p>
-            <br>
-            <code>$ docker inspect nombre_de_la_imagen[:etiqueta]
-            </code>
-
-
         </div>
 
+        <!-- Sección para Deployments y Pods -->
+        <div class="card kubernetes">
+            <h5>Kubernetes Deployments and Pods</h5> 
+            <br>
+            <p># Desplegar una Aplicación desde un Archivo de Configuración:</p>
+            <code>$ kubectl apply -f archivo_de_configuracion.yaml</code>
+            <br>
+            <hr>
+
+            <p># Listar Pods:</p>
+            <code>$ kubectl get pods</code>
+            <br>
+            <hr>
+
+            <p># Describir un Pod:</p>
+            <code>$ kubectl describe pod nombre_del_pod</code>
+            <br>
+            <hr>
+
+            <p># Escalar Replicas de un Despliegue:</p>
+            <code>$ kubectl scale deployment nombre_del_despliegue --replicas=3</code>
+            <br>
+            <hr>
+
+            <p># Actualizar una Aplicación (Rolling Update):</p>
+            <code>$ kubectl set image deployment/nombre_del_despliegue nombre_del_contenedor=nueva_imagen:etiqueta</code>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Sección para Services y Networking -->
+        <div class="card kubernetes">
+            <h5>Kubernetes Services and Networking</h5>
+            <br>
+            <p># Crear un Servicio:</p>
+            <code>$ kubectl expose deployment nombre_del_despliegue --port=puerto --target-port=puerto_del_contenedor --type=LoadBalancer</code>
+            <br>
+            <hr>
+
+            <p># Listar Servicios:</p>
+            <code>$ kubectl get services</code>
+            <br>
+            <hr>
+
+            <p># Inspeccionar un Servicio:</p>
+            <code>$ kubectl describe service nombre_del_servicio</code>
+            <br>
+            <hr>
+
+            <p># Eliminar un Servicio:</p>
+            <code>$ kubectl delete service nombre_del_servicio</code>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Sección para Volumes y Almacenamiento -->
+        <div class="card kubernetes">
+            <h5>Kubernetes Volumes and Storage</h5>
+            <br>
+            <p># Crear un volumen persistente:</p>
+            <code>$ kubectl create persistentvolume nombre_del_volumen</code>
+            <br>
+            <hr>
+
+            <p># Listar Volúmenes Persistentes:</p>
+            <code>$ kubectl get persistentvolumes</code>
+            <br>
+            <hr>
+
+            <p># Inspeccionar un Volumen Persistente:</p>
+            <code>$ kubectl describe persistentvolume nombre_del_volumen</code>
+            <br>
+            <hr>
+
+            <p># Eliminar un Volumen Persistente:</p>
+            <code>$ kubectl delete persistentvolume nombre_del_volumen</code>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Sección para Iniciar y Detener Minikube -->
+        <div class="card minikube">
+            <h5>Minikube - Iniciar y Detener</h5>
+            <br>
+            <p># Iniciar Minikube:</p>
+            <code>$ minikube start</code>
+            <br>
+            <hr>
+
+            <p># Detener Minikube:</p>
+            <code>$ minikube stop</code>
+            <br>
+            <hr>
+
+            <p># Ver el estado de Minikube:</p>
+            <code>$ minikube status</code>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Sección para Interactuar con Clúster -->
+        <div class="card minikube">
+            <h5>Minikube - Interactuar con el Clúster</h5>
+            <br>
+            <p># Obtener Credenciales del Clúster:</p>
+            <code>$ minikube kubectl -- get pods</code>
+            <br>
+            <hr>
+
+            <p># Abrir el Dashboard:</p>
+            <code>$ minikube dashboard</code>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Sección para Configuración y Versiones -->
+        <div class="card minikube">
+            <h5>Minikube - Configuración y Versiones</h5>
+            <br>
+            <p># Ver la Configuración de Minikube:</p>
+            <code>$ minikube config view</code>
+            <br>
+            <hr>
+
+            <p># Ver la Versión de Minikube:</p>
+            <code>$ minikube version</code>
+            <br>
+            <hr>
+        </div>
 
     </div>
 
