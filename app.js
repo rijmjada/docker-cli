@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
     let currentPage = window.location.pathname.split('/').pop();
     let navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -13,5 +12,4 @@ document.addEventListener('DOMContentLoaded', function () {
             link.classList.add('active');
         }
     });
-
 });
