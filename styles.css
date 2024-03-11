@@ -1,12 +1,14 @@
-
-
 body {
-    background-color: grey;
+    background: linear-gradient(105deg, wheat, teal, rgb(38, 95, 151), black);
 }
 
 .navbar {
     border-radius: 0 0 2px 2px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
 .active {
     color: rgb(241, 102, 102) !important;
 }
