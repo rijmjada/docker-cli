@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git commands</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <button class="navbar-toggler ms-auto me-2 custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-5" aria-current="page" href="../index.html"> Docker </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./kubectl.html"> Kubernetes </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./terraform.html"> Terraform </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./git.html"> Git </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./ansible.html"> Ansible </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./nmap.html"> Nmap </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="../img/nmap.png" alt="" class="p-5 mx-auto d-block img-fluid" style="max-height: 300px;">
+
+
+    <div class="container my-3">
+
+        <!-- Nmap Command Options -->
+        <div class="card">
+            <h5>Nmap Command Options</h5>
+            <br>
+            <p> # Escaneo de hosts en una red específica </p>
+            <br>
+            <code>$ nmap <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de puertos en un host específico </p>
+            <br>
+            <code>$ nmap -p <port_range> <target></code>
+            <br>
+            <hr>
+
+            <p># Escaneo de servicios y versiones de software en un host </p>
+            <br>
+            <code>$ nmap -sV <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de puertos UDP </p>
+            <br>
+            <code>$ nmap -sU <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de los 1000 puertos más comunes </p>
+            <br>
+            <code>$ nmap -F <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de una red específica y guardando los resultados en un archivo </p>
+            <br>
+            <code>$ nmap -oN scan_results.txt <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de un rango de IP con un script específico de Nmap </p>
+            <br>
+            <code>$ nmap --script <script_name> <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de un rango de IP y especificando la velocidad del escaneo </p>
+            <br>
+            <code>$ nmap -T<timing> <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de un rango de IP y mostrando los detalles en formato XML </p>
+            <br>
+            <code>$ nmap -oX scan_results.xml <target></code>
+
+            <br>
+            <hr>
+
+            <p># Escaneo de un rango de IP y mostrando solo los hosts que están en línea </p>
+            <br>
+            <code>$ nmap -sn <target></code>
+        </div>
+
+        <!-- Nmap Output Options -->
+        <div class="card">
+            <h5>Nmap Output Options</h5>
+            <br>
+            <p> # Guardar los resultados del escaneo en formato XML </p>
+            <br>
+            <code>$ nmap -oX scan_results.xml <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Guardar los resultados del escaneo en formato greppable </p>
+            <br>
+            <code>$ nmap -oG scan_results.txt <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Guardar los resultados del escaneo en formato normal </p>
+            <br>
+            <code>$ nmap -oN scan_results.txt <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Guardar los resultados del escaneo en formato completo </p>
+            <br>
+            <code>$ nmap -oA scan_results <target></code>
+        </div>
+
+        <!-- Nmap Timing and Performance Options -->
+        <div class="card">
+            <h5>Nmap Timing and Performance Options</h5>
+            <br>
+            <p> # Escaneo rápido (menos precisión) </p>
+            <br>
+            <code>$ nmap -T5 <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo normal (equilibrio entre velocidad y precisión) </p>
+            <br>
+            <code>$ nmap -T3 <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo lento (más precisión) </p>
+            <br>
+            <code>$ nmap -T1 <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo personalizado con ajuste de tiempo </p>
+            <br>
+            <code>$ nmap --min-rate <rate> --max-rate <rate> <target></code>
+        </div>
+
+        <!-- Nmap Host Discovery Options -->
+        <div class="card">
+            <h5>Nmap Host Discovery Options</h5>
+            <br>
+            <p> # Descubrir hosts en una red específica sin escaneo de puertos </p>
+            <br>
+            <code>$ nmap -sn <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Descubrir hosts en una red específica utilizando ICMP Ping </p>
+            <br>
+            <code>$ nmap -PE <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Descubrir hosts en una red específica utilizando TCP SYN Ping </p>
+            <br>
+            <code>$ nmap -PS <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Descubrir hosts en una red específica utilizando ACK Ping </p>
+            <br>
+            <code>$ nmap -PA <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Descubrir hosts en una red específica utilizando UDP Ping </p>
+            <br>
+            <code>$ nmap -PU <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Descubrir hosts en una red específica utilizando ICMP, SYN, ACK y UDP Ping </p>
+            <br>
+            <code>$ nmap -P0 <target></code>
+        </div>
+
+        <!-- Nmap Firewall Evasion Options -->
+        <div class="card">
+            <h5>Nmap Firewall Evasion Options</h5>
+            <br>
+            <p> # Escaneo de hosts saltando el firewall </p>
+            <br>
+            <code>$ nmap -f <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de hosts fragmentando paquetes </p>
+            <br>
+            <code>$ nmap -f -D <decoy1,decoy2,...> <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de hosts utilizando técnicas de evasión avanzadas </p>
+            <br>
+            <code>$ nmap -sS -T paranoid <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de hosts utilizando técnicas de evasión más agresivas </p>
+            <br>
+            <code>$ nmap -sS -T insane <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de hosts utilizando un escáner de evasión lento </p>
+            <br>
+            <code>$ nmap -sS -T0 <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de hosts utilizando un escáner de evasión rápido </p>
+            <br>
+            <code>$ nmap -sS -T5 <target></code>
+        </div>
+
+        <!-- Nmap Service and Version Detection Options -->
+        <div class="card">
+            <h5>Nmap Service and Version Detection Options</h5>
+            <br>
+            <p> # Escaneo de servicios y versiones sin detener la detección al encontrar un servicio </p>
+            <br>
+            <code>$ nmap -sV --version-all <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de servicios y versiones utilizando detección agresiva </p>
+            <br>
+            <code>$ nmap -sV --version-intensity 9 <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de servicios y versiones utilizando scripts de detección </p>
+            <br>
+            <code>$ nmap -sV --script <script_name> <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de servicios y versiones utilizando la base de datos de servicios de Nmap </p>
+            <br>
+            <code>$ nmap -sV --version-trace <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de servicios y versiones utilizando detección agresiva y scripts </p>
+            <br>
+            <code>$ nmap -sV --version-all --script <script_name> <target></code>
+
+            <br>
+            <hr>
+
+            <p> # Escaneo de servicios y versiones utilizando un archivo de versión personalizado </p>
+            <br>
+            <code>$ nmap -sV --version-light --version-trace --version-fingerprint <target></code>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <script src="../js/app.js"></script>
+
+</body>
+
+</html>

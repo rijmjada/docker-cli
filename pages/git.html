@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git commands</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <button class="navbar-toggler ms-auto me-2 custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold fs-5" aria-current="page" href="../index.html"> Docker </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./kubectl.html"> Kubernetes </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./terraform.html"> Terraform </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./git.html"> Git </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./ansible.html"> Ansible </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5" href="./nmap.html"> Nmap </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="../img/Git_icon.svg.png" alt="" class="p-5 mx-auto d-block img-fluid" style="max-height: 300px;">
+
+
+    <div class="container my-3">
+
+        <!-- Git Command Options -->
+        <div class="card">
+            <h5>Git Command Options</h5>
+            <br>
+            <p> # Inicializar un repositorio Git en el directorio actual </p>
+            <br>
+            <code>$ git init </code>
+    
+            <br>
+            <hr>
+    
+            <p> # Añadir todos los archivos al área de preparación </p>
+            <br>
+            <code>$ git add . </code>
+            <br>
+            <hr>
+    
+            <p># Realizar un commit con un mensaje descriptivo</p>
+            <br>
+            <code>$ git commit -m "Mensaje del commit"</code>
+    
+            <br>
+            <hr>
+    
+            <p># Clonar un repositorio Git existente</p>
+            <br>
+            <code>$ git clone [url_del_repositorio]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Ver el estado actual del repositorio</p>
+            <br>
+            <code>$ git status</code>
+    
+            <br>
+            <hr>
+    
+            <p># Obtener cambios del repositorio remoto</p>
+            <br>
+            <code>$ git pull</code>
+    
+            <br>
+            <hr>
+    
+            <p># Subir cambios al repositorio remoto</p>
+            <br>
+            <code>$ git push</code>
+    
+            <br>
+            <hr>
+    
+            <p># Crear una nueva rama</p>
+            <br>
+            <code>$ git branch [nombre_de_la_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Cambiar a una rama específica</p>
+            <br>
+            <code>$ git checkout [nombre_de_la_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Fusionar cambios de una rama en otra</p>
+            <br>
+            <code>$ git merge [nombre_de_la_otra_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Ver el historial de commits</p>
+            <br>
+            <code>$ git log</code>
+    
+            <br>
+            <hr>
+    
+            <p># Ver cambios realizados en los archivos</p>
+            <br>
+            <code>$ git diff</code>
+        </div>
+    
+        <!-- Git Repository Management -->
+        <div class="card ">
+            <h5 class="text-center">Git Repository Management</h5>
+            <br>
+            <p> # Ver la información remota del repositorio </p>
+            <br>
+            <code>$ git remote -v </code>
+    
+            <br>
+            <hr>
+    
+            <p> # Añadir un repositorio remoto </p>
+            <br>
+            <code>$ git remote add origin [url_del_repositorio_remoto]</code>
+            <br>
+            <hr>
+    
+            <p># Eliminar un repositorio remoto.</p>
+            <br>
+            <code>$ git remote remove origin</code>
+    
+            <br>
+            <hr>
+    
+            <p># Cambiar el nombre de un repositorio remoto</p>
+            <br>
+            <code>$ git remote rename origin nuevo_nombre</code>
+    
+            <br>
+            <hr>
+    
+            <p># Ver la URL de un repositorio remoto</p>
+            <br>
+            <code>$ git remote get-url origin</code>
+    
+            <br>
+            <hr>
+    
+            <p># Cambiar la URL de un repositorio remoto</p>
+            <br>
+            <code>$ git remote set-url origin [nueva_url]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Eliminar archivos del área de preparación (staging)</p>
+            <br>
+            <code>$ git reset HEAD [nombre_del_archivo]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Deshacer cambios en un archivo específico</p>
+            <br>
+            <code>$ git checkout -- [nombre_del_archivo]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Eliminar un archivo del repositorio y del sistema de archivos</p>
+            <br>
+            <code>$ git rm [nombre_del_archivo]</code>
+        </div>
+    
+        <!-- Git Branching and Merging -->
+        <div class="card ">
+            <h5 class="text-center">Git Branching and Merging</h5>
+            <br>
+            <p> # Crear una nueva rama </p>
+            <br>
+            <code>$ git branch [nombre_de_la_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p> # Cambiar a una rama específica </p>
+            <br>
+            <code>$ git checkout [nombre_de_la_rama]</code>
+            <br>
+            <hr>
+    
+            <p># Fusionar una rama en la rama actual</p>
+            <br>
+            <code>$ git merge [nombre_de_la_otra_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Eliminar una rama</p>
+            <br>
+            <code>$ git branch -d [nombre_de_la_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Forzar la eliminación de una rama (incluso si hay cambios sin fusionar)</p>
+            <br>
+            <code>$ git branch -D [nombre_de_la_rama]</code>
+    
+            <br>
+            <hr>
+    
+            <p># Mostrar todas las ramas</p>
+            <br>
+            <code>$ git branch</code>
+    
+            <br>
+            <hr>
+    
+            <p># Mostrar el historial de fusiones</p>
+            <br>
+            <code>$ git log --graph --oneline --all</code>
+    
+            <br>
+            <hr>
+    
+            <p># Mostrar las ramas remotas</p>
+            <br>
+            <code>$ git branch -r</code>
+    
+            <br>
+            <hr>
+    
+            <p># Descargar las ramas remotas y su historial</p>
+            <br>
+            <code>$ git fetch</code>
+        </div>
+    
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="../js/app.js"></script>
+
+</body>
+</html>
